@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+.route-place{
+    display: flex;
+    flex-direction: column;
+    width:456px;
+    align-items: center;
+
+}
+
+header {
+    padding: 50px 0px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cadetblue;
+ }
+ 
+ .logo{
+     width: 40px;
+     height: 40px;
+     border-radius: 35%;
+     background-color: burlywood;
+ }
+ 
+ .menu_wrapper{
+     display: flex;
+     gap: 35px;
+     list-style-type: none;
+     color: beige;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: black;
+ }
+ 
+ a.active{
+     color: purple
+ }
+
+ input{
+    /* Password-Input */
+width: 360px;
+height: 48px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
+/* Placeholder-Value */
+color: rgb(128, 128, 128);
+font-family: Roboto;
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: left;
+ }

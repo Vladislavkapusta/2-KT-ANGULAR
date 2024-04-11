@@ -1,0 +1,23 @@
+<form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <h2>Nice to see you again</h2>
+
+      <div class="importField">
+        <label for="email">Login:</label>
+        <input placeholder="Email" class="data" type="email" id="email" formControlName="email" required>
+        <div *ngIf="dataForm.get('email')?.errors && dataForm.get('email')?.touched">
+          <div *ngIf="dataForm.get('email')?.errors?.required" >Email обязательное поле</div>
+          <div *ngIf="dataForm.get('email')?.errors?.email">Неправильный формат email</div>
+        </div>
+      </div>
+      <div class="importField">
+        <label for="password">Password:</label>
+        <input placeholder="Enter password" class="data" type="password" id="password" formControlName="password" required>
+        <div *ngIf="dataForm.get('password')?.errors && dataForm.get('password')?.touched">
+          <div *ngIf="dataForm.get('password')?.errors?.required">Пароль обязательное поле</div>
+        </div>
+      </div>
+
+    <a class="forgot" routerLink="/reset">Forgot password?</a>
+    <button class="submit" type="submit">Sign in</button>
+    <div class="sign"><p class="info">Dont have an account? </p><a [routerLink]="'/registration'" routerLinkActive="active"> Sign up now!</a></div>
+</form>

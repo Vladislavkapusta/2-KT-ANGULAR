@@ -1,0 +1,13 @@
+<form [formGroup]="dataForm" (ngSubmit)='onSubmit()'>
+    <h2>Reset access</h2>
+    <div>
+        <label for="email">Login</label>
+        <input class="data" placeholder="Email" type="email" id="email" formControlName="email" required>
+        <div *ngIf="dataForm.get('email')?.errors && dataForm.get('email')?.touched">
+          <p *ngIf="dataForm.get('email')?.errors?.required" >Email обязательное поле</p>
+          <p *ngIf="dataForm.get('email')?.errors?.email">Неправильный формат email</p>
+        </div>
+      </div>
+    <button class="submit" type="submit">Sign Up</button>
+    <a class="toAuth" [routerLink]="'/auth'">Sign in</a>
+</form>

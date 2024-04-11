@@ -1,0 +1,103 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px 100px 40px;
+}
+a{
+    color: cornflowerblue;
+}
+h2{
+    /* 48 000,00 ₽ */
+width: 360px;
+height: 28px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: self-start;
+flex-grow: 0;
+margin: 24px 0px;
+}
+.forgot{
+    text-align: end;
+}
+.sign{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+.importField{
+    display: flex;
+    flex-direction: column;
+}
+.data{
+width: 360px;
+height: 48px;
+padding: 8px 16px 8px 16px;
+/* Inside Auto Layout */
+flex: none;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
+/* Placeholder-Value */
+color: rgb(128, 128, 128);
+background-color:rgb(255, 254, 250);
+font-family: Roboto;
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: left;
+
+border: none;
+border-radius: 6px;
+ }
+
+ .submit{
+width: 360px;
+height: 40px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px 24px 10px 24px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 32px 0px;
+
+border: none;
+border-radius: 6px;
+background-color: rgb(48, 48, 255);
+color: white;
+ }
+ .toAuth{
+    width: 360px;
+    height: 40px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px 10px 24px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    
+    border: none;
+    border-radius: 6px;
+    color: rgb(48, 48, 255);
+    background-color: white;
+     }
