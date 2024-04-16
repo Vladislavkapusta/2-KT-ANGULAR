@@ -1,0 +1,66 @@
+<div class="container">
+<h1>Recepies</h1>
+    <header>
+        <!-- <select [(ngModel)]="difficulty" (change)="onDifficultyChange($event)">
+            <option value="all">all</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+          </select> -->
+          
+            <a (click)="onDifficultyChange('all')" [routerLink]="['/', mealType, 'all']" routerLinkActive="active">All</a>
+            <a (click)="onDifficultyChange('Easy')" [routerLink]="['/', mealType, 'Easy']"  routerLinkActive="active">Easy</a>
+            <a (click)="onDifficultyChange('Medium')" [routerLink]="['/', mealType, 'Medium']"  routerLinkActive="active">Medium</a>
+       
+    </header>
+<div class="foodTypes">
+    <ul class="menu">
+        <li class="menu-item"><a  routerLinkActive="active" [routerLink]="['/Breakfast/', difficulty]" >Breakfast</a></li>
+        <li class="menu-item"><a routerLinkActive="active" [routerLink]="['/Lunch/', difficulty]" >Lunch</a></li>
+        <li class="menu-item"><a routerLinkActive="active" [routerLink]="['/Dinner/', difficulty]" >Dinner</a></li>
+    </ul>
+</div>
+    <div class="product-scroll-container">
+    @for (recipe of recipes; track recipe){
+    <div  class="recipeCard">
+        <h3 class="nameRec">{{recipe.name}}</h3>
+        <h4 class="spec-font" style="color: grey; margin-top: 25px; margin-bottom: 10px;">ingredients</h4>
+        <div class="ingredients">
+            @for(ingredient of recipe.ingredients; track ingredient){
+                <div class="ingredient">
+                    {{ingredient}}
+                </div>
+            }
+        </div>
+        <h4 style="color: grey; margin-bottom: 10px;">Information</h4>
+        <div class="box-container">
+        <div class="info-box">
+            <p class="numberOf">{{recipe.caloriesPerServing}}</p>
+            <p class="infoText">Calories</p>
+        </div>
+        <div class="info-box">
+            <p class="numberOf">{{recipe.rating}}</p>
+            <p class="infoText">Rating</p>
+        </div>
+        <div class="info-box">
+            <p class="numberOf">{{recipe.prepTimeMinutes}}</p>
+            <p class="infoText">Prep time <br> minutes</p>
+        </div>
+        <div class="info-box">
+            <p class="numberOf">{{recipe.cookTimeMinutes}}</p>
+            <p class="infoText">Cook time <br> minutes</p>
+        </div>
+    </div>
+        <button (click)="toMemory(recipe.id)" [routerLink]="['/recipe', recipe.id]" [id]="recipe.id">Recipe</button>
+        <!-- <img class="imgCard" src={{recipe.image}} alt="prod" > -->
+        <div class="imgCard" style="background-image: url('{{recipe.image}}')"></div>
+      </div>
+    }</div>
+
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+

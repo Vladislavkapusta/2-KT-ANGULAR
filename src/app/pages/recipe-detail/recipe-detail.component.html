@@ -1,0 +1,38 @@
+<h1>Recepies</h1>
+<a style="margin-left: 75px;" (click)='goBack()'>Go back</a>
+<div  class="recipeCard">
+    <h3 class="nameRec">{{recipe.name}}</h3>
+    <h4 class="spec-font" style="color: grey; margin-top: 25px; margin-bottom: 10px;">Instructions</h4>
+    <div class="scroll-container">
+    <ul class="instructions">
+        @for(instruction of recipe.instructions; track instruction){
+            <li>
+                {{instruction}}
+            </li>
+        }
+    </ul>
+    </div>
+
+    <h4 style="color: grey; margin-bottom: 10px;">Information</h4>
+    <div class="box-container">
+    <div class="info-box">
+        <p class="numberOf">{{recipe.caloriesPerServing}}</p>
+        <p class="infoText">Calories</p>
+    </div>
+    <div class="info-box">
+        <p class="numberOf">{{recipe.rating}}</p>
+        <p class="infoText">Rating</p>
+    </div>
+    <div class="info-box">
+        <p class="numberOf">{{recipe.prepTimeMinutes}}</p>
+        <p class="infoText">Prep time <br> minutes</p>
+    </div>
+    <div class="info-box">
+        <p class="numberOf">{{recipe.cookTimeMinutes}}</p>
+        <p class="infoText">Cook time <br> minutes</p>
+    </div>
+</div>
+    <!-- <img class="imgCard" src={{recipe.image}} alt="prod" > -->
+    <div class="imgCard" style="background-image: url('{{recipe.image}}')"></div>
+  </div>
+  <app-footer></app-footer>

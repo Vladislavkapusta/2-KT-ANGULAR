@@ -1,0 +1,166 @@
+h1{
+    margin: 10px 0px 0px 25px;
+    color: rgb(64, 64, 64);
+    font-family: Arima Madurai;
+    font-size: 44.24px;
+    font-weight: 800;
+    line-height: 72px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.recipeCard{
+    padding: 5px 17px 0px 40px;
+    flex: 0 0 auto;
+    width: 640px;
+    height: 470px;
+    background-color: transparent;
+    border: 10px solid white;
+    border-radius: 10px;
+    border-radius: 19.42px;
+    box-shadow: 0px 2.16px 5.4px 0px rgba(0.30, 0.30, 0.30, 0.30);
+    margin-bottom: 30px;
+    position: relative;
+}
+.product-scroll-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 215px;
+    margin-left: 100px;
+  }
+header{
+    width: 200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: 10px 50px 100px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+.active{
+    color: black;
+}
+.foodTypes{
+    position: fixed;
+    background: rgb(240, 247, 255);
+    height: 100%;
+}
+
+.menu {
+    width: 100px;
+    height: 1000px;
+    position: relative;
+  }
+  
+  .menu-item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform-origin: top left;
+    white-space: nowrap;
+    list-style: none;
+  }
+  
+  .menu-item:nth-child(1) {
+    top: 120px;
+    transform: translateY(-50%) translateX(30%) rotate(-90deg);
+  }
+  
+  .menu-item:nth-child(2) {
+    top: 240px; /* Примерное расстояние между элементами */
+    transform: translateY(-50%) translateX(30%) rotate(-90deg);
+  }
+  
+  .menu-item:nth-child(3) {
+    top: 360px; /* Примерное расстояние между элементами */
+    transform: translateY(-50%) translateX(30%) rotate(-90deg);
+  }
+
+  /* INFO LAYOUT */
+h3{
+    color: rgb(64, 64, 64);
+    font-size: 23.98px;
+    font-weight: 800;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.ingredients{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+
+    width: 300px;
+    height: 190px;
+    gap:13px;
+    overflow: scroll;
+}
+.ingredient{
+    height: min-content;
+    padding: 5px 10px 10px 10px;
+    border-radius: 7.03px;
+    box-shadow: 0px 1.76px 4.4px 0px rgba(0, 0, 0, 0.15);
+    background: rgb(255, 255, 255);
+
+    color: rgb(64, 64, 64);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.box-container{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    gap: 20px;
+}
+.info-box{
+    height: 80px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    box-shadow: 0px 1.76px 4.4px 0px rgba(0, 0, 0, 0.15);
+}
+.numberOf{
+    color: rgb(0, 0, 0);
+    font-family: Roboto;
+    font-size: 19.42px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.infoText{
+    color: rgb(150, 150, 150);
+    font-family: Roboto;
+    font-size: 12.95px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    word-break: break-all;
+    height: 40px;
+
+}
+.imgCard{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 15%;
+    left: 420px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    border-radius: 10px;
+}

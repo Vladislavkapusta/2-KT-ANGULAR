@@ -1,0 +1,16 @@
+
+<footer>
+
+       <h3>More recepies</h3>
+<div class="recipes">
+   @for(recipe of recentRecepies; track recipe){
+    <div [routerLink]="['/recipe', recipe.id]" class="card">
+        <div class="imgCard" style="background-image: url('{{recipe.image}}')"></div>
+        <p class="nameRec">{{recipe.name}}</p>
+        <p class="numberOf">{{recipe.cookTimeMinutes}} min cooktime</p>
+    </div>
+} 
+</div> 
+
+</footer>
+
